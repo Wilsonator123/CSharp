@@ -21,3 +21,7 @@ Console.WriteLine(first);
 Console.WriteLine(Fibonacci.Recursive(num, 1, 0));
 
 Console.WriteLine(Fibonacci.DemoExample(100));
+
+Fibonacci fib = new("John", "Doe");
+
+Console.WriteLine(fib.FullName());

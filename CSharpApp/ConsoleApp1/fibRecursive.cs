@@ -9,6 +9,15 @@ namespace ConsoleApp1;
 internal class Fibonacci
 {
     private static readonly BigInteger[] cache = new BigInteger[101];
+    private readonly string _firstName;
+    private readonly string _lastName;
+    public Func<string> FullName => () => $"{_firstName} {_lastName}";
+
+    public Fibonacci(string firstName, string lastName)
+    {
+        _firstName = firstName;
+        _lastName = lastName;
+    }
 
     public static BigInteger Recursive(int counter, BigInteger second, BigInteger first)
     {
